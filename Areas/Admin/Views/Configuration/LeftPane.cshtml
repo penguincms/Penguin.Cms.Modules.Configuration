@@ -1,0 +1,28 @@
+﻿<ul>
+    <li>
+        <a href="/Admin/Configuration/FlushCache">
+            @Html.MaterialIcon("refresh")
+            <span>Flush Cache</span>
+        </a>
+    </li>
+    <li>
+        <a href="/Admin/Configuration/Edit">
+            @Html.MaterialIcon("add_box")
+            <span>Create</span>
+        </a>
+    </li>
+    @foreach (Penguin.Cms.Configuration.CmsConfiguration thisConfig in ConfigurationService.GetAll().OrderBy(n => n.Name))
+    {
+    <li>
+        @{string Link = $"/Admin/Configuration/EditByName?Name={thisConfig.Name}";}
+        <a href="@Link" @Html.Attribute("class", "selected", string.Equals(Context.Request.Path, Link))>
+            <i class="material-icons md-24">
+                settings_applications
+            </i>
+            <span>
+                @thisConfig.Name
+            </span>
+        </a>
+    </li>
+    }
+</ul>
