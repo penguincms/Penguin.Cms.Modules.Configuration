@@ -10,8 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="wwwroot\**\*" />
-    <PackageReference Include="Penguin.Cms.Modules.Dynamic" Version="1.0.0-T9LXGUJ" />
-    <PackageReference Include="Penguin.Cms.Configuration" Version="2.0.3-T9LXGUJ" />
+    <PackageReference Include="Penguin.Cms.Modules.Dynamic" Version="1.0.1-T9M1K2Y" />
+    <PackageReference Include="Penguin.Cms.Configuration" Version="2.0.4-T9M1KR6" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\**\*" />
