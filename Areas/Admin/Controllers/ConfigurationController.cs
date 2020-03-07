@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Penguin.Cms.Configuration;
+using Penguin.Cms.Configuration.Extensions;
 using Penguin.Cms.Modules.Dynamic.Areas.Admin.Controllers;
 using Penguin.Configuration.Abstractions.Interfaces;
 using Penguin.Persistence.Abstractions.Interfaces;
-using Penguin.Security.Abstractions.Attributes;
 using Penguin.Security.Abstractions.Constants;
-using Penguin.Cms.Configuration.Extensions;
-using System;
 using Penguin.Web.Security.Attributes;
+using System;
 
 namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
 {
@@ -19,17 +18,17 @@ namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
 
         public ConfigurationController(IRepository<CmsConfiguration> configurationRepository, IProvideConfigurations configurationService, IServiceProvider serviceProvider) : base(serviceProvider)
         {
-            ConfigurationService = configurationService;
-            ConfigurationRepository = configurationRepository;
+            this.ConfigurationService = configurationService;
+            this.ConfigurationRepository = configurationRepository;
         }
 
         public ActionResult EditByName(string Name)
         {
-            CmsConfiguration config = ConfigurationRepository.GetByName(Name) ??
+            CmsConfiguration config = this.ConfigurationRepository.GetByName(Name) ??
                 new CmsConfiguration()
                 {
                     Name = Name,
-                    Value = ConfigurationService.GetConfiguration(Name)
+                    Value = this.ConfigurationService.GetConfiguration(Name)
                 };
 
             return this.Edit(config);
