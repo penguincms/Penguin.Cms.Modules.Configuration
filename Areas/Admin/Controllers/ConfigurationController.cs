@@ -22,13 +22,13 @@ namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
             this.ConfigurationRepository = configurationRepository;
         }
 
-        public ActionResult EditByName(string Name)
+        public ActionResult EditByName(string Name, string Value = null)
         {
             CmsConfiguration config = this.ConfigurationRepository.GetByName(Name) ??
                 new CmsConfiguration()
                 {
                     Name = Name,
-                    Value = this.ConfigurationService.GetConfiguration(Name)
+                    Value = Value ?? this.ConfigurationService.GetConfiguration(Name)
                 };
 
             return this.Edit(config);
