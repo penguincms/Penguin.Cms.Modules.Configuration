@@ -25,7 +25,7 @@ namespace Penguin.Cms.Modules.Configuration.ComponentProviders
                                 Href = "/Admin/Configuration/Index",
                                 Permissions = new List<ISecurityGroupPermission>()
                                 {
-                                    this.CreatePermission(RoleNames.SysAdmin, PermissionTypes.Read | PermissionTypes.Write)
+                                    this.CreatePermission(RoleNames.SYS_ADMIN, PermissionTypes.Read | PermissionTypes.Write)
                                 }
                             }
                     }

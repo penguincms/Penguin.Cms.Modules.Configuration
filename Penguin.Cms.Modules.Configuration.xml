@@ -4,5 +4,36 @@
         <name>Penguin.Cms.Modules.Configuration</name>
     </assembly>
     <members>
+        <member name="T:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController">
+            <summary>
+            Administration controller used to manage CmsConfiguration objects
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.ConfigurationRepository">
+            <summary>
+            A repository used to persist configurations
+            </summary>
+        </member>
+        <member name="P:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.ConfigurationService">
+            <summary>
+            An IProvideConfigurations implementation used as a configuration source
+            </summary>
+        </member>
+        <member name="M:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.#ctor(Penguin.Persistence.Abstractions.Interfaces.IRepository{Penguin.Cms.Configuration.CmsConfiguration},Penguin.Configuration.Abstractions.Interfaces.IProvideConfigurations,System.IServiceProvider)">
+            <summary>
+            Constructs a new instance of the ConfigurationController
+            </summary>
+            <param name="configurationRepository">A repository used to persist configurations</param>
+            <param name="configurationService">An IProvideConfigurations implementation used as a configuration source</param>
+            <param name="serviceProvider">A ServiceProvider instance used for dependency injection</param>
+        </member>
+        <member name="M:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.EditByName(System.String,System.String)">
+            <summary>
+            Returns an editor for the requested configuration
+            </summary>
+            <param name="Name">The name of the configuration to edit</param>
+            <param name="Value">Override the value displayed in the editor. Useful for defaults</param>
+            <returns>The editor view</returns>
+        </member>
     </members>
 </doc>
