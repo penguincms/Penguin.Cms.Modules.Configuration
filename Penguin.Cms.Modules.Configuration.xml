@@ -19,7 +19,7 @@
             An IProvideConfigurations implementation used as a configuration source
             </summary>
         </member>
-        <member name="M:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.#ctor(Penguin.Persistence.Abstractions.Interfaces.IRepository{Penguin.Cms.Configuration.CmsConfiguration},Penguin.Configuration.Abstractions.Interfaces.IProvideConfigurations,System.IServiceProvider)">
+        <member name="M:Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers.ConfigurationController.#ctor(Penguin.Persistence.Abstractions.Interfaces.IRepository{Penguin.Cms.Configuration.CmsConfiguration},Penguin.Configuration.Abstractions.Interfaces.IProvideConfigurations,System.IServiceProvider,Penguin.Security.Abstractions.Interfaces.IUserSession)">
             <summary>
             Constructs a new instance of the ConfigurationController
             </summary>

@@ -5,6 +5,7 @@ using Penguin.Cms.Modules.Dynamic.Areas.Admin.Controllers;
 using Penguin.Configuration.Abstractions.Interfaces;
 using Penguin.Persistence.Abstractions.Interfaces;
 using Penguin.Security.Abstractions.Constants;
+using Penguin.Security.Abstractions.Interfaces;
 using Penguin.Web.Security.Attributes;
 using System;
 
@@ -32,7 +33,7 @@ namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
         /// <param name="configurationRepository">A repository used to persist configurations</param>
         /// <param name="configurationService">An IProvideConfigurations implementation used as a configuration source</param>
         /// <param name="serviceProvider">A ServiceProvider instance used for dependency injection</param>
-        public ConfigurationController(IRepository<CmsConfiguration> configurationRepository, IProvideConfigurations configurationService, IServiceProvider serviceProvider) : base(serviceProvider)
+        public ConfigurationController(IRepository<CmsConfiguration> configurationRepository, IProvideConfigurations configurationService, IServiceProvider serviceProvider, IUserSession userSession) : base(serviceProvider, userSession)
         {
             this.ConfigurationService = configurationService;
             this.ConfigurationRepository = configurationRepository;
