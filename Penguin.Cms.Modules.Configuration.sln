@@ -1,25 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29418.71
+VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Penguin.Cms.Modules.Configuration", "Penguin.Cms.Modules.Configuration.csproj", "{97BE1AD1-6135-45DD-B3CF-1F83A84F94C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Penguin.Cms.Modules.Configuration", "Penguin.Cms.Modules.Configuration.csproj", "{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97BE1AD1-6135-45DD-B3CF-1F83A84F94C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97BE1AD1-6135-45DD-B3CF-1F83A84F94C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97BE1AD1-6135-45DD-B3CF-1F83A84F94C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97BE1AD1-6135-45DD-B3CF-1F83A84F94C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A1FA6A16-64AC-4F41-9477-6B410CACE2A7}
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|x64.Build.0 = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Debug|x86.Build.0 = Debug|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|x64.ActiveCfg = Release|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|x64.Build.0 = Release|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|x86.ActiveCfg = Release|Any CPU
+		{97D650CE-27D8-4E85-AB4F-12228B0DF7A6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
