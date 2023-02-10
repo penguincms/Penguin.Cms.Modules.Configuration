@@ -35,8 +35,8 @@ namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
         /// <param name="serviceProvider">A ServiceProvider instance used for dependency injection</param>
         public ConfigurationController(IRepository<CmsConfiguration> configurationRepository, IProvideConfigurations configurationService, IServiceProvider serviceProvider, IUserSession userSession) : base(serviceProvider, userSession)
         {
-            this.ConfigurationService = configurationService;
-            this.ConfigurationRepository = configurationRepository;
+            ConfigurationService = configurationService;
+            ConfigurationRepository = configurationRepository;
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace Penguin.Cms.Modules.Configuration.Areas.Admin.Controllers
         /// <returns>The editor view</returns>
         public ActionResult EditByName(string Name, string? Value = null)
         {
-            CmsConfiguration config = this.ConfigurationRepository.GetByName(Name) ??
+            CmsConfiguration config = ConfigurationRepository.GetByName(Name) ??
                 new CmsConfiguration()
                 {
                     Name = Name,
-                    Value = Value ?? this.ConfigurationService.GetConfiguration(Name)
+                    Value = Value ?? ConfigurationService.GetConfiguration(Name)
                 };
 
-            return this.Edit(config);
+            return Edit(config);
         }
     }
 }
